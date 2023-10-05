@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css\style.css">
+<script src="https://kit.fontawesome.com/c3f7e1e896.js" crossorigin="anonymous"></script>
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#Home page">Task Manager</a>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                <a href="#">Board</a>
+            </li>
+            <li>
+                <a href="#">Analytics</a>
+            </li>
+            <li>
+                <a href="#">Login out</a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<body>
+    <h1>Welcome to Website</h1>
+    <div class="infoblock">
+        <div class="card">
+            <div class="avatar">
+                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+            </div>
+            <div class="infolist">
+                <ul>
+                    <li>
+                        <h2>Name</h2>
+                    </li>
+                    <li>
+                        <h3 class="user-name">Yerbolat</h3>
+                     </li>
+                     <li>
+                        <h2>Post</h2>
+                     </li>
+                     <li>
+                        <h3 class="user-post">Developer</h3>
+                     </li>
+                     <li>
+                        <h2>Status</h2>
+                     </li>
+                     <li>
+                        <h3 class="user-status">Online</h3>
+                     </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="infolist">
+                <ul>
+                    <li>
+                        <h2>Files</h2>
+                    </li>
+                    <li>
+                        <h3 class="user-files">0</h3>
+                     </li>
+                     <li>
+                        <h2>Folder</h2>
+                     </li>
+                     <li>
+                        <h3 class="user-folder">0</h3>
+                     </li>
+                     <li>
+                        <h2>Repasitory</h2>
+                     </li>
+                     <li>
+                        <h3 class="user-repasitory">None</h3>
+                     </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FAlmaty&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&hl=en&mode=MONTH"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="board">
+        <h3>Board</h3>
+    </div>
+ 
+ <div class="main">
+
+        <div class="state-wrapper">
+            <div class="state-box">
+                <h2>Future
+                    <button id="to-do-button" class="transparent-buttom">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </h2>
+                <ul id="to-do-task-list">
+                    
+                </ul>
+            </div>
+            <div class="state-box">
+                <h2>In progress
+                    <button id="in-progress-button" class="transparent-buttom">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </h2>
+                <ul id="task-list">
+                </ul>
+            </div>
+            <div class="state-box">
+                <h2>Done
+                    <button class="transparent-buttom">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </h2>
+                <ul id="task-list">
+                </ul>
+            </div>
+        </div>
+
+ </div>
+ <div class="form-to-do">
+
+            <form id="task-form">
+                <h4>Future <button class="transparent-buttom" id="form-exit-button"><i class="fa-solid fa-xmark"></i></button></h4>
+
+                <label for="task-title">Task Title:</label>
+                <input type="text" id="task-title" name="task-title" required>
+
+                <label for="task-description">Description:</label>
+                <textarea id="task-description" name="task-description"></textarea>
+
+                <label for="task-due-date">Due Date:</label>
+                <input type="date" id="task-due-date" name="task-due-date" value="2023-10-04">
+
+                <label for="task-priority">Priority:</label>
+                <select id="task-priority" name="task-priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+    </div>
+    <script src="js\code.js"></script>
+
+</body>
+<footer>
+    <p>Footer</p>
+</footer>
+
+</html>

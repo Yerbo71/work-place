@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+p {
+    font-size: small;
+}
+
+h1{
+    font-size:clamp(2rem,3vw,100px);
+}
+
+/*====================== Header ============*/
+
+
+
+nav{
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    background: #FFF;
+    border-radius: 20px;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+nav ul {
+    position: fixed;
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    list-style: none;
+}
+
+header li {
+    margin: auto;
+}
+nav ul li a:hover{
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: #FFF;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    border-radius: 5px;
+
+}
+
+header li:first-child {
+    margin: auto;
+    margin-right: clamp(50px ,40%, 50%);
+}
+header a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease 0s;
+}
+
+
+
+/*==================== Body ===============*/
+
+
+body{
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+
+/*==================== Avatar ===============*/
+
+h1 {
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+    color: black;
+}
+.infoblock{
+    display: flex;
+    margin-top: 20px;
+    overflow: hidden;
+    justify-content: center;
+
+}
+.card{
+    display: block;
+    overflow: auto;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 40px;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+/*block of avatar*/
+.avatar {
+    display: flex;
+    width: 175px;
+    height: 175px;
+    position: relative; /* Добавляем относительное позиционирование */
+    border-radius: 50%; /* Используем 50% для создания круглой формы */
+    background: url('../img/defaultAvatar.jpg') lightgray 50% / cover no-repeat;
+    margin-top: 37px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.avatar::before {
+    content: "+";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.avatar:hover::before {
+    opacity: 1;
+}
+
+
+.infolist{
+    background: rgb(225, 231, 236);
+    border-radius: 10px;
+    font-size: smaller;
+    display: flex;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.infolist ul{
+    list-style: none;
+    margin-top: 12px;
+    margin-left: 12px;
+    
+}
+.infolist h2{
+    font-size: medium;
+    color: rgb(120, 120, 120);
+    margin-top: 5px;
+    
+}
+.infolist h3{
+    margin-top: 5px;
+    font-size: medium;
+}
+
+.calendar iframe{
+    width: 500px;
+    height: 500px;
+    border-radius: 25px;
+    justify-content: center;
+
+}
+
+
+/*======================Board============*/
+
+.main{
+    display: block;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 20px;
+
+}
+
+.board{
+    font-size:xx-large;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.state-wrapper {
+    width: 95%;
+    display: flex;
+    gap: 3%;
+    margin: auto;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+/*======================Button============*/
+
+.transparent-buttom {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+}
+
+
+/* Remove default button styles */
+
+button:focus {
+    outline: none;
+}
+
+.state-wrapper .state-box {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(225, 231, 236);
+    border-radius: 10px;
+    overflow: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.state-box:hover{
+    transform: scale(1.015);
+}
+
+
+.state-wrapper .state-box h2 {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: large;
+}
+
+ul {
+    list-style: none;
+}
+
+.task-box {
+    overflow: hidden;
+    background-color: #fff;
+    width: 90%;
+    margin: 20px auto 20px;
+    border-radius: 20px;
+    height: 150px;
+}
+
+.low-priority {
+    color: green;
+}
+
+.medium-priority {
+    color: orange;
+}
+
+.high-priority {
+    color: red;
+}
+
+.task-box h3,
+p {
+    margin: 20px;
+
+}
+
+.task-box h3 {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+/*======================Forms============*/
+
+.form-to-do {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Прозрачный фон с 50% прозрачностью */
+    z-index: 1; /* Перемещаем форму над другими элементами */
+    top: 0;
+}
+#task-form {
+    position: fixed;
+    background-color: rgba(225, 231, 236, 0.95); /* Прозрачный фон с 95% прозрачностью */
+    justify-content: center;
+    border-radius: 20px;
+    width: 600px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование формы */
+    z-index: 2; 
+    padding: 20px; /* Добавим отступы для контента внутри формы */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Добавим тень для формы */
+}
+
+/* Стилизация заголовка формы */
+.form-to-do h4 {
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* Стилизация кнопки закрытия формы */
+#form-exit-button {
+    background: none;
+    border: none;
+    color: #007bff; /* Цвет кнопки */
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    outline: none;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+#form-exit-button:hover {
+    color: #0056b3; /* Измененный цвет при наведении */
+}
+
+/* Стилизация формы полей и кнопки */
+#task-form label {
+    display: block;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+#task-form input[type="text"],
+#task-form textarea,
+#task-form select,#task-form #task-due-date {
+    width: 96%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#task-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета кнопки при наведении */
+}
+
+#task-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Измененный цвет при наведении */
+}
+
+
+
+
+footer {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+ }
+
+
+
+
+
+/*======================Media============*/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
