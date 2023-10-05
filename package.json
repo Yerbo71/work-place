@@ -1,0 +1,23 @@
+{
+  "name": "workplace",
+  "version": "1.0.0",
+  "description": "Made by students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker-build": "docker compose up --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yerbo71/WorkPlace.git"
+  },
+  "author": "Erbolat, Dias, Nurzhigit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yerbo71/WorkPlace/issues"
+  },
+  "homepage": "https://github.com/Yerbo71/WorkPlace#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
