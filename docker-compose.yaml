@@ -1,13 +1,27 @@
-version: '3'
-
+version: '3.5'
 services:
-  db:
-    environment:
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_USER=admin
-    image: postgres
-  app:
-    image: my-node-app
+  node-app:
+    container_name: workplace-node-app
+    image: workplace-image
+    restart: always
     ports:
-      - 13000:3000  
+      - "3000:3000"
     
+
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: db
+    environment:
+      POSTGRES_DB: workplace
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+
+volumes:
+  postgres-data:
+  app:
