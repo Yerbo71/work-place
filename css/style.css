@@ -29,6 +29,7 @@ nav{
     display: flex;
     align-items: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    z-index: 2;
 }
 nav ul {
     position: fixed;
@@ -201,7 +202,6 @@ h1 {
     gap: 3%;
     margin: auto;
     overflow: hidden;
-    background-color: aliceblue;
 }
 
 /*======================Button============*/
