@@ -3,7 +3,7 @@
 ## Get Started with Docker
 1. Firstly, create image, run this code in terminal **`docker build -t workplace-image .`**
 2. Create container for image **`docker compose up`** 
-3. If you change something in code (*Nurzhigit*) write again 2 this commands
+3. If you change something in code write again 2 this commands
 
 ## Database 
 Do this steps only once. <br>
